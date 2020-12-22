@@ -3,23 +3,38 @@
 @font-face{
     font-family: 'Raleway', sans-serif;
     src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
-    color: #000;
+    font: #000;
 }
 
 html{
     font-family: Raleway;
 }
 
-header, main{
-    margin: 10px 45px;
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    margin: 10px 4%;
 }
 
 h1{
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 .h1{
     font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+h4{ 
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h2{
+    flex-basis: 100%;
 }
 
 a{
@@ -38,7 +53,8 @@ header{
     align-items: center;
 }
 
-header div{
+#logo{
+    margin: 0px 4%;
     flex-basis: 55%;
 }
 
@@ -67,10 +83,12 @@ nav div a:hover{
     margin-right: 20px;
     color: #0065FC;
     font-weight: bold;
+    margin: 0px 4%;
 }
 
                     /*fin du header*/
                     /*css des filtres et informations*/
+
 #labelfilters{
     font-weight: bold;
     margin-right: 10px;
@@ -80,14 +98,15 @@ nav div a:hover{
     background-color: #DEEBFF;
     border-radius: 50px;
     color: #0065FC;
-    margin: 0px 5px 0px -8px;
+    padding: 0px 5px 0px -10px;
     font-size: 1.2em;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
+    transform: translateX(-35%);
 }
 
 .i i{
-    padding: 14px 12px 15px 12px;
+    transform: translateY(80%);
 }
 
 .i, #informations{
@@ -95,20 +114,24 @@ nav div a:hover{
     align-items: center;
     border: 3px solid #F2F2F2;
     border-radius: 50px;
-    margin: 10px 20px;
     background-color: #ffffff;
 }
 
 .i{
-    height: 45px;
-    padding-right: 10px;
+    height: 50px;
     font-size: 0.9em;
+    margin: 10px 20px;
+}
+
+.i p{
+    padding-right: 15px;
 }
 
 #filters{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    margin: 10px;
 }
 
 .i:hover{
@@ -127,7 +150,7 @@ nav div a:hover{
 
 #informations{
     border: none;
-    margin: 10px 0px 0px 0px;
+    margin: 10px;
 }
 
 #informations i{
@@ -149,8 +172,8 @@ nav div a:hover{
 
 #searchbar{
     display: flex;
-    align-items: center;
-    padding: 10px 0px;
+    text-align: center;
+    margin: 10px;
 }
 
 #iconmap{
@@ -158,11 +181,20 @@ nav div a:hover{
     background-color: #F2F2F2;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
-    padding: 10px;
+    width: 50px;
+    font-size: 1em;
+}
+
+#iconmap i{
+    transform: translateY(80%);
+}
+
+input{
+    padding-left: 10px;
 }
 
 input, #submit{
-    padding: 8px 5px;
+    height: 50px;
     border: 2px solid #F2F2F2;
     margin: 0 -1px;
     color: #000;
@@ -174,7 +206,7 @@ input, #submit{
 }
 
 #search{
-    width: 200px;
+    width: 250px;
 }
 
 #submit{
@@ -182,10 +214,11 @@ input, #submit{
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     border: 2px solid #0065FC;
-    margin: -1px 0 -1px -1px;
+    margin: 0px 0px 0px -1px;
     color: #ffffff;
-    padding: 8px 10px;
+    height: 50px;
 }
+
                     /*fin de la searchbar*/
                     /*css du contenu principal*/
 
@@ -197,18 +230,18 @@ input, #submit{
 
 #accomodations, #popular{
     background-color: #F2F2F2;
-    border-radius: 25px;
+    border-radius: 18px;
 }
 
 #accomodations, #popular{
-    display: flex;
     flex-flow: row wrap;
 }
 
 #accomodations{
     order: 1;
-    flex-basis: 68%;
+    flex-basis: 66%;
     justify-content: space-around;
+    display: flex;
 }
 
 #popular{
@@ -240,7 +273,6 @@ input, #submit{
 .popular{
     display: flex;
     background-color: #ffffff;
-    margin: 0px 20px;
     border: 4px solid #ffffff;
     border-radius: 25px;
     box-shadow: 1px 1px 5px 2px #5a5959;
@@ -268,14 +300,18 @@ input, #submit{
     font-size: 1em;
 }
 
+.accomodations_h2, .accomodations_plus, .popular_h2{
+    padding-left: 35px;
+}
+
                         /*css grid*/
 
 .grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 30px 200px 50px 150px 30px;
-    gap: 20px 25px;
-    /*margin: 0px -40px 0px -40px;*/
+    grid-template-rows: 30px 200px 50px 150px;
+    gap: 30px 35px;
+    margin-bottom: 100px;
 }
 
 .grid div:nth-of-type(1){
@@ -313,17 +349,13 @@ input, #submit{
     grid-row: 3 / span 2;
 }
 
-.grid div:nth-of-type(8){
-    grid-column: 1 / span 4;
-    grid-row: 4;
-}
-
 .activities{
     height: 100%;
     width: 100%;
     border-radius: 25px;
     box-shadow: 1px 1px 5px 2px #5a5959;
     position: relative;
+    margin: 10px 0px;
 }
 
 .activities img{
@@ -345,23 +377,19 @@ input, #submit{
 
                         /*fin du css grid*/
 
-.texte{
+figcaption{
     margin: 2px 0px 0px 10px;
     background-color: #ffffff;
 }
 
-.texte p{
+figcaption p{
     font-size: 0.8em;
     margin: 5px;
 }
 
-.texte strong{
-    font-size: 1em;
+strong{
+    font-size: 1.2em;
     font-weight: 700;
-}
-
-.stars{
-    margin-left: 4px;
 }
 
 .fa-star{
@@ -373,20 +401,8 @@ input, #submit{
     color: #0065FC;
 }
 
-h4{ 
-    font-size: 1em;
-    font-weight: bold;
-}
-
-h2{
-    flex-basis: 100%;
-    padding: 5px 30px;
-}
-
 .plus{
     flex-basis: 100%;
-    justify-content: flex-start;
-    margin-left: 60px;
     font-size: 1em;
     font-weight: bold;
     padding-bottom: 15px;
@@ -397,13 +413,17 @@ h2{
 footer{
     background-color: #F2F2F2;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 18%;
     padding-bottom: 20px;
+    padding-left: 3%;
 }
 
 footer a{
     font-size: 0.9em;
+    padding-top: 1em;
 }
+
                     /*fin du css du footer*/
 
                     /*début media queries*/
@@ -419,7 +439,7 @@ footer a{
     
     .popular img{
         width: 100%;
-        height: 64%;
+        height: 60%;
         object-fit: cover;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
@@ -427,17 +447,53 @@ footer a{
     }
 }
 
-@media screen and (max-width: 1030px){
-
-    .popular img{
-        height: 57%;
-    }
-}
-
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1080px){
 
     #labelfilters{
         flex-basis: 100%;
+    }
+
+    h1{
+        padding: 8% 0px 10px 0px;
+    }
+
+    #submit{
+        display: none;
+    }
+
+    nav{
+        order: 2;
+        padding-bottom: 30px;
+        width: 100vw;
+        margin: 0px;
+        text-align: center;
+    }
+
+    nav div{
+        border-bottom: 3px solid #DEEBFF;
+        margin: 0px;
+        width: 100vw;
+    }
+
+    nav div:hover{
+        border-top: none;
+        border-bottom: 3px solid #0065FC;
+        transition-duration: 300ms;
+    }
+
+    #loupe{
+        visibility: visible;
+        height: 50px;
+        width: 50px;
+        font-size: 1em;
+        background-color: #0065FC;
+        border-radius: 15px;
+        border: none;
+        margin: -1px 0 -1px -30px;
+    }
+
+    #loupe i{
+        color: #ffffff;
     }
 
     #content{
@@ -447,18 +503,17 @@ footer a{
 
     #popular{
         order: 1;
-        width: 100%;
+        display: flex;
     }
 
     .popular{
         display: flex;
         flex-direction: row;
         background-color: #ffffff;
-        margin: 20px 20px;
         border: 4px solid #ffffff;
         border-radius: 25px;
         box-shadow: 1px 1px 5px 2px #5a5959;
-        max-width: 600px;
+        width: 65vw;
         height: 150px;
         overflow: hidden;
     }
@@ -477,12 +532,10 @@ footer a{
         background-color: #ffffff;
     }
 
-    .accomodations{
-        max-height: 200px;
-        width: 500px;
+    .accomodations, .activities{
+        height: 250px;
+        width: 65vw;
         overflow: hidden;
-        flex-flow: column;
-        align-items: flex-start;
     }
     
     .accomodations img{
@@ -497,21 +550,16 @@ footer a{
     #activities{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        margin-left: 15%;
     }
 
-    .activities{
-        max-height: 200px;
-        width: 500px;
-        overflow: hidden;
-        flex-flow: column;
-        align-items: flex-start;
-        justify-content: space-around;
+    .grid{
+        gap: 0px 0px;
     }
     
     .activities img{
         width: 100%;
-        height: 64%;
+        height: 250px;
         object-fit: cover;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
@@ -520,103 +568,49 @@ footer a{
     }
 }
 
-@media screen and (max-width: 840px){
+@media screen and (max-width: 800px){
 
-    nav{
-        order: 2;
-        padding-bottom: 30px;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav div{
-        border-bottom: 3px solid #DEEBFF;
-    
-    }
-
-    nav div:hover, nav div:active{
-        border-top: none;
-        border-bottom: 3px solid #0065FC;
-        transition-duration: 300ms;
-    }
-
-    h1{
-        padding: 30px 0px 10px 0px;
-    }
-
-    #submit{
-        display: none;
-    }
-
-    #iconmap{
-        padding: 15px;
-    }
-
-    #search{
-        width: 220px;
-        height: 45px;
-    }
-
-    #loupe{
-        visibility: visible;
-        height: 45px;
-        width: 45px;
-        font-size: 1.2em;
-        background-color: #0065FC;
-        border-radius: 15px;
-        border: none;
-        margin: -1px 0 -1px -30px;
-        padding: 0px 0px;
-    }
-
-    #loupe i{
-        color: #ffffff;
+    footer{
+        flex-flow: column;
+        justify-content: flex-start;
+        padding-left: 38px;
     }
 }
 
 @media screen and (max-width: 700px){
 
+    main{
+        margin: 10px 0px;
+    }
+
+    h1, #h1, #searchbar, #filters, #informations{
+        margin: 10px 3%;
+    }
+
+    .activities, .accomodations, .popular{
+        width: 85vw;
+    }
+
     #activities{
-        flex-direction: column;
+        margin-left: 28px;
     }
-    .activities{
-        max-height: 200px;
-        width: auto;
-        overflow: hidden;
-        flex-flow: column;
-        align-items: flex-start;
-    }
-    
-    .activities img{
-        width: 100%;
-        height: 60%;
-        object-fit: cover;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        border-bottom-left-radius: 0px;
-    }
-}
 
-@media screen and (max-width: 650px){
-
-    .accomodations{
-        width: auto;
-    }
-}
-
-@media screen and (max-width: 630px){
-
-    footer{
-        flex-flow: column;
-        justify-content: flex-start;
-        padding-left: 60px;
+    #popular{
+        width: 100vw;
+        padding: 0px;
+        border-radius: 0px;
     }
 }
 
 @media screen and (max-width: 480px){
 
-    header, main{
-        margin: 2px 1px;
+    #searchbar{
+        justify-content: center;
+    }
+
+    #labelfilters{
+        margin-left: 20px;
     }
 }
+
                             /*fin media queries*/
