@@ -3,7 +3,6 @@
 @font-face{
     font-family: 'Raleway', sans-serif;
     src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
-    color: #000;
 }
 
 html{
@@ -98,7 +97,6 @@ nav div a:hover{
     background-color: #DEEBFF;
     border-radius: 50px;
     color: #0065FC;
-    padding: 0px 5px 0px -10px;
     font-size: 1.2em;
     height: 20px;
     width: 50px;
