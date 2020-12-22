@@ -3,7 +3,7 @@
 @font-face{
     font-family: 'Raleway', sans-serif;
     src: url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
-    font: #000;
+    color: #000;
 }
 
 html{
@@ -94,19 +94,16 @@ nav div a:hover{
     margin-right: 10px;
 }
 
-.i div{
+.i i{
     background-color: #DEEBFF;
     border-radius: 50px;
     color: #0065FC;
     padding: 0px 5px 0px -10px;
     font-size: 1.2em;
-    height: 50px;
+    height: 20px;
     width: 50px;
-    transform: translateX(-35%);
-}
-
-.i i{
-    transform: translateY(80%);
+    transform: translateX(-20%);
+    padding: 15px 0px;
 }
 
 .i, #informations{
@@ -121,9 +118,6 @@ nav div a:hover{
     height: 50px;
     font-size: 0.9em;
     margin: 10px 20px;
-}
-
-.i p{
     padding-right: 15px;
 }
 
@@ -139,7 +133,7 @@ nav div a:hover{
     font-weight: bold;
     transition-delay: 125ms;
 }
-.i:hover div{
+.i:hover i{
     background-color: #0065FC;
     color: #ffffff;
     transition: 300ms;
@@ -213,7 +207,7 @@ input, #submit{
     background-color: #0065FC;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-    border: 2px solid #0065FC;
+    border: none;
     margin: 0px 0px 0px -1px;
     color: #ffffff;
     height: 50px;
@@ -252,9 +246,9 @@ input, #submit{
 }
 
 .accomodations{
-    background-color: #ffffff;
+    background: #fff;
     margin: 15px;
-    border: 4px solid #ffffff;
+    border: 4px solid #fff;
     border-radius: 25px;
     box-shadow: 1px 1px 5px 2px #5a5959;
     width: 250px;
